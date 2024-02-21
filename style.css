@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans MT", sans-serif;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text span {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__first-text span {
+  background-color: #3aa5fd;
+}
+
+.button__second-text span {
+  background-color: #0f0f0f;
+  transition: transform 0.2s ease;
+}
+
+.button__second-text {
+  position: absolute;
+  inset: 0;
+}
+
+.button__second-text span:nth-child(odd) {
+  transform: translateY(100%);
+}
+
+.button__second-text span:nth-child(even) {
+  transform: translateY(-100%);
+}
+
+.button:hover .button__second-text span {
+  transform: translateY(0);
+}
